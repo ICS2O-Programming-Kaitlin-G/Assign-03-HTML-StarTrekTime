@@ -1,0 +1,39 @@
+/* Created by: Katie
+* Created on: March 2022
+* This CSS file defines the style for index.html
+* ICS2O-Assign3-HTML-StarTrekTime
+*/
+
+h1 {
+  background-color: cadetblue;
+  color: rgb(237, 219, 55);
+  border: 5px double rgb(206, 19, 0);
+  padding: 30px;
+}
+
+body {
+  background-color: cornsilk;
+}
+
+h3 {
+  background-color: rgb(237, 219, 55);
+  color: rgb(206, 19, 0);
+  border: 5px double cadetblue;
+  padding: 15px;
+}
+
+#number-of-episodes {
+  background-color: rgb(206, 19, 0);
+  color: rgb(237, 219, 55);
+  border: 5px double cadetblue;
+}
+
+#duration-of-time {
+  background-color: rgb(206, 19, 0);
+  color: rgb(237, 219, 55);
+  border: 5px double cadetblue;
+}
+
+img {
+  border: 5px double rgb(237, 219, 55);
+}

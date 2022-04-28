@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- ICS2O-Unit4-01-HTML-GuessMyNumber -->
+<html lang="en-ca">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="This program will calculate the amount of time it will take to watch a certain number of star trek episodes and additionally the number of star trek episodes that can be viewed in a certain amount of time.">
+    <meta name="keywords" content="immaculata, ics2o">
+    <meta name="author" content="Katie G">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css"> 
+    
+    <!-- For the Favicon on this page -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./fav/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./fav/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./fav/favicon-16x16.png">
+    <link rel="manifest" href="./fav/site.webmanifest">
+    
+    <!-- Google's MDL -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.blue_grey-light_blue.min.css" /> 
+    <title>Star Trek episodes and the fleeting nature of time.</title>
+
+    <!-- Javascript script file search lookup command that will enable my beloved computer program to do the thing :D -->
+    <script src="./js/script.js"></script>
+  </head>
+  <body>
+    <!-- Google's MDL -->
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <div class = "mdl-layout mdl-js-layout--fixed-header">
+    
+    <!-- Container for web page content -->
+    <main class = "mdl-layout__content" style = "padding-left:10px">
+      
+      <!-- Header, more specifically the largest header possible, primarily for visual structural aesthetic. -->
+      <h1>Star Trek Episodes and the fleeting nature of time.</h1>
+
+      <!-- Poetic text about Star Trek and Time, which also describes the web page function briefly. This text prepares the user for what they are about to witness. -->
+      <center>
+        <p>Time. A fickle thing. Without our careful vigilance, our swift maintenance of it, time could pass through our fingers swifter than the sands that pass through the hourglasses that dictate the span of our lives. Time, such an important concept, yet so difficult to grasp for many. What truly makes up time? Well, dear user, today we shall endeavour to place a new significance that may very well distort our very perception of time; we will use time in relation to Star Trek episodes.</p>
+
+        <!-- image of the crew of the starship enterprise -->
+        <img src="./images/startrek.jpg" alt="The Crew of the Starship Enterprise">
+        <br>
+        <br>
+
+        <!-- Some interlude text about Star Trek and what it is -->
+        <p>For those of you who do not know, Star Trek was a sci-fi television series that ran from 1966 to 1969. The series follows the crew of the starship Enterprise, a Starfleet vessel, and the adventures of the crew as they partake on a five year mission to, as the introduction of the show declares, "explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before". The series was created by Gene Roddenberry. Though the series is over 50 years old, it still remains popular and a recognizable name to this day; with over 6 television series and 9 films created in the same universe, the most recent of which will premiere on May 6th, 2022, it is easy to see the legacy that this show has produced, though the Original Series was somewhat short-lived.</p>
+        
+        <!-- more detailed text explaining the function of this website that is less poetic and more to the point -->
+        <p>In this website, you will find two functions. The first function will calculate the amount of time needed in hours to watch a specified number of Star Trek episodes. The second function will calculate the amount of episodes that can be watched in a specified number of time in hours. </p>
+
+        <!-- header for the first function, because why not? why not. I like order. I believe Mr. Spock likes order too. 2 against 1. -->
+        <h3>Function One: Time Required for Star Trek Episode Viewing</h3>
+
+        <!-- a little bit of introductory text to this section of the website -->
+        <p>Ah yes, I see! You are interested in watching Star Trek, however you need to plan the time accordingly in your life. I admire the dedication to order. Shall we spare some time and energy and simply proceed to the function? I believe we shall.</p>
+  
+        <!-- a text field powered and created by Google's MDL. This textfield will collect the number of episodes the user wishes to watch -->
+        <form action="javascript:calculateTimeClicked()">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="number" step="0.01" id="episode-quantity">
+            <label class="mdl-textfield__label" for="episode-quantity">Quantity of episodes</label>
+          </div>
+          <br>
+  
+          <!-- A button, also powered and created by Google's MDL. This button will initiate the calculating procedure. -->
+          <button onclick="calculateTimeClicked()" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+            Calculate Length of Time
+          </button>
+        </form>
+        <br>
+  
+        <!-- this div element is where the information calculated by the computer will be displayed.-->
+        <div id="duration-of-time"></div>
+        <br>
+        <br>
+
+        <!-- Header for the second function. Once again I hope you enjoy order because it is 2 against 1. You are outnumbered. -->
+        <h3>Function Two: Number of Episodes Viewable in a Specific Time Period</h3>
+
+        <!-- some introductory text to describe what will be happening in this section, mainly describing how to use it -->
+        <p>As we know, time is very complicated. Sometimes, you only have a limited amount of time, but alas this does not stop the Star Trek Grind. Enter the amount of time you have available to you in hours, and the computer will calculate how many episodes can be viewed in this time frame in a swift manner. </p>
+
+        <!-- text field that will collect the amount of available time from the user -->
+        <form action="javascript:calculateEpisodesClicked()">
+          <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+            <input class="mdl-textfield__input" type="number" step="0.01" id="amount-of-time">
+            <label class="mdl-textfield__label" for="amount-of-time">Amount of time in hours</label>
+          </div>
+          <br>
+
+          <!-- A button, also powered and created by Google's MDL. This button will initiate the calculating procedure. -->
+          <button onclick="calculateEpisodesClicked()" class="mdl-button mdl-js-button mdl-js-ripple-effect">
+            Calculate Quantity of Episodes
+          </button>
+        </form>
+        <br>
+
+        <!-- this div element is once again where the information calculated by my beloved computer program will be displayed -->
+        <div id="number-of-episodes"></div>
+      </center>
+    </main>
+    </div>
+  </body>
+</html>
