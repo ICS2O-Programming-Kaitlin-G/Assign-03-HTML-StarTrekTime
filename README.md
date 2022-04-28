@@ -1,1 +1,2 @@
 # Assign-03-HTML-StarTrekTime
+[![GitHub's Super Linter](https://github.com/ICS2O-Programming-Kaitlin-G/Assign-03-HTML-StarTrekTime/actions/workflows/main.yml/badge.svg)](https://github.com/ICS2O-Programming-Kaitlin-G/Assign-03-HTML-StarTrekTime/actions)
